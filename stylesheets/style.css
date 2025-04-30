@@ -1,3 +1,7 @@
+:root {
+    --main-Color: #480ca8;
+}
+
 html, body {
     margin: 0;
 }
@@ -19,17 +23,62 @@ body {
 
 .header {
     grid-column: 2 / 3;
-    background-color: red;
+    background-color: white;
 }
 
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-    background-color: blue;
+    background-color: var(--main-Color);
+    display: grid;
+    grid-template-rows: 1fr 4fr 4fr;
+    padding-bottom: 80%;
+    color: white;
+    font-size: 1.2em;
+    padding: 16px 0px 0px 20px;
+    font-weight: bold;
+}
+
+.sidebarLinks {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 14px;
+    margin-left: 13px;
+    align-items: center;
+}
+
+.sidebarLinks > svg {
+    grid-column: 1 / 2; 
+}
+
+.sidebarLinks > div {
+    grid-column: 2 / 3;
+}
+
+.sidebarIcon {
+    height: 34px;
 }
 
 .content {
     grid-column: 2 / 3;
-    background-color: violet;
+    background-color: #ced4da;
 }
 
+.dashboardContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboardLogo {
+    font-size: 1.5em;
+}
+
+.dashboardIcon {
+    height: 60px;
+}
+
+.divider {
+    height: 30px;
+}
